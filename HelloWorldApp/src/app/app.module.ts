@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';  // ✅ Import FormsModule
+import { FormsModule } from '@angular/forms';  
 
 import { AppComponent } from './app.component';
 
@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule,  // ✅ Required for [(ngModel)]
+    FormsModule,  
   ],
   providers: [],
   bootstrap: [AppComponent]

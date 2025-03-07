@@ -1,9 +1,17 @@
-<div class="container">
-  <h2 *ngIf="userName">Hello {{ userName }} from BridgeLabz!</h2>
+<div style="text-align: center; margin-top: 50px;">
 
-  <a (click)="openBridgeLabz()" href="#">
-    <img src="assets/BL_logo_square_jpg.jpg" alt="BridgeLabz Logo" class="logo" width="300px" />
+  <h2 *ngIf="!errorMessage && userName" style="font-size: 28px; font-weight: bold; margin-bottom: 10px;">
+    Hello {{ userName }} from BridgeLabz!
+  </h2>
+
+  <a (click)="openBridgeLabz()">
+    <img src="assets/BL_logo_square_png.png" alt="BridgeLabz Logo" width="150">
   </a>
 
-  <input type="text" [(ngModel)]="userName" class="input-box" placeholder="Enter your name" />
+  <div style="margin-top: 20px;">
+    <input type="text" [(ngModel)]="userName" (keyup)="validateUserName()" placeholder="Enter your name">
+  </div>
+
+  <p *ngIf="errorMessage" style="color: red; margin-top: 5px;">{{ errorMessage }}</p>
+
 </div>
