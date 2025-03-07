@@ -1,7 +1,9 @@
+<div class="container">
+  <h2 *ngIf="userName">Hello {{ userName }} from BridgeLabz!</h2>
 
-<img 
-  src="assets/BL_logo_square_jpg.jpg" 
-  alt="BridgeLabz Logo" 
-  (click)="openBridgeLabz()" 
-  style="cursor: pointer; width: 150px;"
->
+  <a (click)="openBridgeLabz()" href="#">
+    <img src="assets/BL_logo_square_jpg.jpg" alt="BridgeLabz Logo" class="logo" width="300px" />
+  </a>
+
+  <input type="text" [(ngModel)]="userName" class="input-box" placeholder="Enter your name" />
+</div>
